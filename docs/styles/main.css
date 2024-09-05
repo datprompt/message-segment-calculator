@@ -10,7 +10,7 @@ h1 {
 }
 
 #calculator-header {
-    background-color: #7323ba;
+    background-color: #59bb6c;
     padding: 10px;
 }
 
@@ -44,14 +44,14 @@ h1 {
     text-align: center;
     font-size: small;
     font-variant: all-petite-caps;
-    background-color: #7323ba;
+    background-color: #59bb6c;
     color: white;
 }
 #information-box > .value {
     padding-top: 5px;
     font-size: medium;
     text-align: center;
-    background-color: #7323ba;
+    background-color: #59bb6c;
     color: white;
     margin-bottom: 0;
 }
