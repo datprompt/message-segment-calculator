@@ -3,14 +3,16 @@ class SegmentsViewer {
         this.node = node;
         this.segmentTypesCount = segmentTypesCount;
         this.twilioLogo = this.createTwilioLogo();
+        console.log(this.createTwilioLogo())
         this.blockMap = new Map();
         this.selectedBlocks = [];
     }
 
     createTwilioLogo() {
         let img = document.createElement('img');
-        const twilio_logo = '<svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" preserveAspectRatio="xMidYMid meet"><path d="M15 0C6.7 0 0 6.7 0 15s6.7 15 15 15 15-6.7 15-15S23.3 0 15 0zm0 26C8.9 26 4 21.1 4 15S8.9 4 15 4s11 4.9 11 11-4.9 11-11 11zm6.8-14.7c0 1.7-1.4 3.1-3.1 3.1s-3.1-1.4-3.1-3.1 1.4-3.1 3.1-3.1 3.1 1.4 3.1 3.1zm0 7.4c0 1.7-1.4 3.1-3.1 3.1s-3.1-1.4-3.1-3.1c0-1.7 1.4-3.1 3.1-3.1s3.1 1.4 3.1 3.1zm-7.4 0c0 1.7-1.4 3.1-3.1 3.1s-3.1-1.4-3.1-3.1c0-1.7 1.4-3.1 3.1-3.1s3.1 1.4 3.1 3.1zm0-7.4c0 1.7-1.4 3.1-3.1 3.1S8.2 13 8.2 11.3s1.4-3.1 3.1-3.1 3.1 1.4 3.1 3.1z"/></svg>';
+        const twilio_logo = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1718.76 1456.78"><defs><style>.cls-1 {fill: #59bb6c;}</style></defs><!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709) --><g><g id="Layer_1"><path class="cls-1" d="M1145.96,359.19V48.77c0-26.9-21.8-48.77-48.77-48.77H48.77C21.87,0,0,21.8,0,48.77v1000.39c0,26.9,21.8,48.77,48.77,48.77h135.31c12.77,0,25.06-5.09,34.17-14.13l152.02-152.02h202.55v310.42c0,26.9,21.8,48.77,48.77,48.77h728.42l151.68,151.68c9.03,9.03,21.33,14.13,34.17,14.13h134.15c26.9,0,48.77-21.8,48.77-48.77V407.89c0-26.9-21.8-48.77-48.77-48.77h-523.97l-.07.07ZM1527.56,1198.26l-84.23-84.23c-9.03-9.03-21.33-14.13-34.17-14.13h-645.35v-168.11h190.46v-190.46h-190.46v-191.07h-191.07v190.46h-261.71c-12.77,0-25.06,5.09-34.17,14.13l-85.79,85.79V191h763.74v168.11h-191.07v191.07h191.07v191.07h191.07v-191.07h381.6v648l.07.07Z"/></g></g></svg>';
         img.setAttribute("src", "data:image/svg+xml;base64," + btoa(twilio_logo));
+        console.log(img)
         return img;
     }
 

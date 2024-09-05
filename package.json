@@ -29,7 +29,8 @@
   "homepage": "https://twiliodeved.github.io/message-segment-calculator/",
   "license": "MIT",
   "dependencies": {
-    "grapheme-splitter": "^1.0.4"
+    "grapheme-splitter": "^1.0.4",
+    "sms-segments-calculator": "^1.2.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
