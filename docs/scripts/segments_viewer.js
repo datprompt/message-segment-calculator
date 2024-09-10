@@ -1,3 +1,7 @@
+//cd docs
+//npm run dev
+//-m http.server
+
 class SegmentsViewer {
     constructor(node, segmentTypesCount) {
         this.node = node;

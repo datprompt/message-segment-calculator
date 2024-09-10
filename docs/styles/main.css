@@ -1,7 +1,7 @@
 body {
     max-width: 100%;
     font-family: "Helvetica", sans-serif;
-    font-size: 11pt;
+    font-size: 14pt;
 }
 
 h1 {
@@ -12,16 +12,21 @@ h1 {
 #calculator-header {
     background-color: #59bb6c;
     padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 8px; 
+    margin-bottom: 20px;
 }
 
 #calculator-header a {
-    /* default blue/purples would be unreadable against blue background */
     color: inherit;
 }
 
 #message-box {
-    color: white;
+    background-color: #59bb6c; 
+    color: black;
     margin-bottom: 10px;
+    padding: 15px; 
+    border-radius: 8px; 
 }
 
 #message-box > textarea {
@@ -29,7 +34,19 @@ h1 {
     width: 100%;
     box-sizing: border-box;
     min-height: 5em;
+    color: black;
+    border: none;
+    border-radius: 5px; 
+    padding: 10px; 
+    font-size: 12pt;
 }
+
+#message-box > textarea:focus {
+    outline: none;
+    border: 2px solid #7323ba; 
+}
+
+
 
 #information-box {
     display: grid;
@@ -45,14 +62,14 @@ h1 {
     font-size: small;
     font-variant: all-petite-caps;
     background-color: #59bb6c;
-    color: white;
+    color: black;
 }
 #information-box > .value {
     padding-top: 5px;
     font-size: medium;
     text-align: center;
     background-color: #59bb6c;
-    color: white;
+    color: black;
     margin-bottom: 0;
 }
 
@@ -125,76 +142,94 @@ h1 {
 /* GSM-7 Segments Color Palette */
 /********************************/
 [data-encoding="GSM-7"] .segment-type-0 {
-    background-color: #CCE4FF;
+    background-color: #7323ba; 
+    color: white; 
 }
 [data-encoding="GSM-7"] .segment-type-0.selected {
-    background-color: #0263E0;
+    background-color: #9457f0; 
+    color: white;
 }
 
 [data-encoding="GSM-7"] .segment-type-1 {
-    background-color: #D1FAE0;
+    background-color: #f38000; 
+    color: white;
 }
 [data-encoding="GSM-7"] .segment-type-1.selected {
-    background-color: #14B053;
+    background-color: #e15e3d; 
+    color: white; 
 }
 
 [data-encoding="GSM-7"] .segment-type-2 {
-    background-color: #FDDCC4;
+    background-color: #9457f0; 
+    color: white; 
 }
 [data-encoding="GSM-7"] .segment-type-2.selected {
-    background-color: #F47C22;
+    background-color: #7323ba; 
+    color: white; 
 }
 
 [data-encoding="GSM-7"] .segment-type-3 {
-    background-color: #FFF1B3;
+    background-color: #e15e3d; 
+    color: white; 
 }
 [data-encoding="GSM-7"] .segment-type-3.selected {
-    background-color: #E8B407;
+    background-color: #f38000; 
+    color: white;
 }
 
 [data-encoding="GSM-7"] .segment-type-4 {
-   background-color: #E7DCFA;
-}
-[data-encoding="GSM-7"] .segment-type-4.selected {
-    background-color: #6D2ED1;
-}
+    background-color: #d4b8f9; 
+ }
+ [data-encoding="GSM-7"] .segment-type-4.selected {
+     background-color: #9457f0; 
+ }
 
 /********************************/
 /* UCS-2 Segments Color Palette */
 /********************************/
+
 [data-encoding="UCS-2"] .segment-type-0 {
-    background-color: #FFF1B3;
-}
-[data-encoding="UCS-2"] .segment-type-0.selected {
-    background-color: #E8B407;
-}
+    background-color: #d4b8f9; 
+ }
+ [data-encoding="UCS-2"] .segment-type-0.selected {
+     background-color: #9457f0; 
+ }
 
 [data-encoding="UCS-2"] .segment-type-1 {
-    background-color: #E7DCFA;
+    background-color: #f38000; 
+    color: white;
 }
 [data-encoding="UCS-2"] .segment-type-1.selected {
-    background-color: #6D2ED1;
+    background-color: #e15e3d; 
+    color: white; 
 }
 
 [data-encoding="UCS-2"] .segment-type-2 {
-    background-color: #CCE4FF;
+    background-color: #9457f0; 
+    color: white;
 }
 [data-encoding="UCS-2"] .segment-type-2.selected {
-    background-color: #0263E0;
+    background-color: #7323ba; 
+    color: white; 
 }
 
 [data-encoding="UCS-2"] .segment-type-3 {
-    background-color: #D1FAE0;
+    background-color: #e15e3d;
+    color: white; 
 }
 [data-encoding="UCS-2"] .segment-type-3.selected {
-    background-color: #14B053;
+    background-color: #f38000; 
+    color: white;
 }
 
+
 [data-encoding="UCS-2"] .segment-type-4 {
-   background-color: #FDDCC4;
+    background-color: #7323ba; 
+    color: white; 
 }
 [data-encoding="UCS-2"] .segment-type-4.selected {
-    background-color: #F47C22;
+    background-color: #9457f0; 
+    color: white;
 }
 
 .block.non-gsm {
@@ -207,7 +242,7 @@ h1 {
 
 @keyframes pulseHighlight {
   0% {
-    color: yellow;
+    color: #f38000;
   }
   100% {
     color: white;
@@ -225,7 +260,6 @@ h1 {
 
 .legend-block {
     display: inline;
-    border: 1px solid rgba(0, 0, 0, 0.2);
     font-size: 10px;
     height: 1em;
     padding: 4px;
