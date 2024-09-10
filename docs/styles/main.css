@@ -12,10 +12,12 @@ h1 {
 #calculator-header {
     background-color: #59bb6c;
     padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     border-radius: 8px; 
     margin-bottom: 20px;
 }
+
+
 
 #calculator-header a {
     color: inherit;
@@ -43,7 +45,7 @@ h1 {
 
 #message-box > textarea:focus {
     outline: none;
-    border: 2px solid #7323ba; 
+    border: 2px solid lightgreen; 
 }
 
 
@@ -72,6 +74,21 @@ h1 {
     color: black;
     margin-bottom: 0;
 }
+
+@media (max-width: 500px) {
+    #information-box {
+        grid-template-columns: repeat(4, auto); 
+        grid-template-rows: repeat(4, auto); 
+    }
+}
+
+@media (max-width: 350px) {
+    #information-box {
+        grid-template-columns: repeat(6, auto); 
+        grid-template-rows: repeat(6, auto); 
+    }
+}
+
 
 #viewers {
     background-color: #F9F9F9;
@@ -270,4 +287,37 @@ h1 {
   
 #warnings-viewer {
     font-size: 10px;
+}
+
+input, textarea {
+    transition: all 0.1s ease-in-out;
+}
+
+textarea:focus, input:focus {
+    box-shadow: 0 0 10px rgba(115, 35, 186, 0.5); 
+}
+
+select {
+    appearance: none; 
+    background-color: #59bb6c; 
+    color: black; 
+    border: 2px solid lightgreen;
+    border-radius: 8px;
+    padding: 4px;
+    font-size: 10pt;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+select::after {
+    content: "▼";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    pointer-events: none;
+}
+
+select:hover {
+    background-color: lightgreen; 
+    border: 2px solid lightgreen;
 }
